@@ -1,0 +1,9 @@
+/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/obj/Assembly-CSharp/Assembly-CSharp.csproj.AssemblyReference.cache
+/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/obj/Assembly-CSharp/Assembly-CSharp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/obj/Assembly-CSharp/Assembly-CSharp.csproj.CoreCompileInputs.cache
+/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/obj/Assembly-CSharp/Assembly-CSharp.sourcelink.json
+/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/bin/Debug/Assembly-CSharp.deps.json
+/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/bin/Debug/Assembly-CSharp.pdb
+/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/obj/Assembly-CSharp/Assembly-CSharp.dll
+/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/obj/Assembly-CSharp/Assembly-CSharp.pdb

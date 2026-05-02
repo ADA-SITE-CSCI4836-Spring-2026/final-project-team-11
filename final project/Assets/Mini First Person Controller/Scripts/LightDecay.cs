@@ -5,7 +5,7 @@ using UnityEngine;
 public class LightDecay : MonoBehaviour
 {
     public Light torchLight;
-    public float decaySpeed = 1f;
+    public float decaySpeed = 0.5f;
     public float minRange = 1.5f;
 
     void Update()

@@ -1,0 +1,4 @@
+/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/Temp/obj/TimeEnemyCheck/TimeEnemyCheck.csproj.AssemblyReference.cache
+/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/Temp/obj/TimeEnemyCheck/TimeEnemyCheck.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/Temp/obj/TimeEnemyCheck/TimeEnemyCheck.csproj.CoreCompileInputs.cache
+/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/Temp/obj/TimeEnemyCheck/TimeEnemyCheck.sourcelink.json
