@@ -1,44 +1,67 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FirstPersonMovement : MonoBehaviour
 {
-    public float speed = 5;
+    public float speed = 5f;
 
     [Header("Running")]
     public bool canRun = true;
     public bool IsRunning { get; private set; }
-    public float runSpeed = 9;
+    public float runSpeed = 9f;
     public KeyCode runningKey = KeyCode.LeftShift;
 
-    Rigidbody rigidbody;
-    /// <summary> Functions to override movement speed. Will use the last added override. </summary>
+    [Header("Ground")]
+    [SerializeField] GroundCheck groundCheck;
+
+    [Range(0f, 1f)]
+    public float airControl = 0.35f;
+
+    Rigidbody rb;
+    Jump jump;
+
     public List<System.Func<float>> speedOverrides = new List<System.Func<float>>();
-
-
 
     void Awake()
     {
-        // Get the rigidbody on this.
-        rigidbody = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
+        jump = GetComponent<Jump>();
+
+        if (!groundCheck)
+            groundCheck = GetComponentInChildren<GroundCheck>();
+
+        // 🔥 ВАЖНО
+        rb.freezeRotation = true; // убирает кручение
+        rb.useGravity = true;
     }
 
     void FixedUpdate()
     {
-        // Update IsRunning from input.
         IsRunning = canRun && Input.GetKey(runningKey);
 
-        // Get targetMovingSpeed.
-        float targetMovingSpeed = IsRunning ? runSpeed : speed;
+        float currentSpeed = IsRunning ? runSpeed : speed;
+
         if (speedOverrides.Count > 0)
-        {
-            targetMovingSpeed = speedOverrides[speedOverrides.Count - 1]();
-        }
+            currentSpeed = speedOverrides[speedOverrides.Count - 1]();
 
-        // Get targetVelocity from input.
-        Vector2 targetVelocity =new Vector2( Input.GetAxis("Horizontal") * targetMovingSpeed, Input.GetAxis("Vertical") * targetMovingSpeed);
+        bool grounded = groundCheck && groundCheck.isGrounded;
 
-        // Apply movement.
-        rigidbody.velocity = transform.rotation * new Vector3(targetVelocity.x, rigidbody.velocity.y, targetVelocity.y);
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
+
+        Vector3 move = (transform.forward * v + transform.right * h).normalized;
+
+        // 🔥 ГЛАВНЫЙ ФИКС
+        Vector3 velocity = rb.velocity;
+
+        float control = grounded ? 1f : airControl;
+
+        velocity.x = move.x * currentSpeed * control;
+        velocity.z = move.z * currentSpeed * control;
+
+        // ❌ УБРАЛИ РУЧНОЙ Y
+        // Unity сама управляет гравитацией
+
+        rb.velocity = velocity;
     }
 }
