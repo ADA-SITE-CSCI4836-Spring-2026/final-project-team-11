@@ -361,6 +361,7 @@
 "Assets/Mini First Person Controller/Scripts/Components/Zoom.cs"
 "Assets/Mini First Person Controller/Scripts/FirstPersonLook.cs"
 "Assets/Mini First Person Controller/Scripts/FirstPersonMovement.cs"
+"Assets/Mini First Person Controller/Scripts/LightDecay.cs"
 -langversion:9.0
 /deterministic
 /optimize+
