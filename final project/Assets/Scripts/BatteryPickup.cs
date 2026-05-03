@@ -26,6 +26,13 @@ public class BatteryPickup : MonoBehaviour
         }
 
         lightDecay.torchLight.range += rangeRestore;
+
+        GameTimer gameTimer = FindObjectOfType<GameTimer>();
+        if (gameTimer != null)
+        {
+            gameTimer.AddTime(5f);
+        }
+
         collected = true;
         Destroy(gameObject);
     }
