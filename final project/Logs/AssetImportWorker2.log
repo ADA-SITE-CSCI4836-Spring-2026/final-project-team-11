@@ -6300,3 +6300,34 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:scripting/precompiled-assembly-types:Assembly-CSharp: cd6a2367d43cda185d1734ab2b4bad49 -> 8cd0465497158b6955cbc8cc5371fe2e
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.10 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (3.0 KB). Loaded Objects now: 4422.
+Memory consumption went from 480.5 MB to 480.5 MB.
+Total: 2.072875 ms (FindLiveObjects: 0.123000 ms CreateObjectMapping: 0.037500 ms MarkObjects: 1.899000 ms  DeleteObjects: 0.013209 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/EnemyAI.cs: b23c04a72171da1bfba3c740e359e309 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:scripting/monoscript/fileName/GameOverListener.cs: c1054a8dabb0a3d92204dc7e651f94d1 -> 
+  custom:scripting/monoscript/fileName/UIManager.cs: 619f5747dc184f3577c898ec321c40d4 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/BatteryPickup.cs: 834ed8b699e347b2d40b7a78eb1c0d48 -> 649781e149243dda17df260b3ad0be9a
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:scripting/monoscript/fileName/RestartButton.cs: c95a3ce1799821ce712be825694325d8 -> 
+  custom:scripting/monoscript/fileName/WinTrigger1.cs: 9ee005166463080ef5ae5959a3859915 -> 
+  custom:scripting/monoscript/fileName/WinTrigger.cs: d7e502a2185e7941daf41888a440502e -> 0e75194c0edba08cd6926e8a67161d74
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: cd6a2367d43cda185d1734ab2b4bad49 -> 8cd0465497158b6955cbc8cc5371fe2e
