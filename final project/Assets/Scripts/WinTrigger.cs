@@ -65,7 +65,7 @@ namespace EscapeUI
         private static bool IsPlayer(Collider other)
         {
             Transform root = other.transform.root;
-            return root != null && root.CompareTag("Player");
+            return (root != null && root.CompareTag("Player")) || other.CompareTag("Player");
         }
     }
 }
