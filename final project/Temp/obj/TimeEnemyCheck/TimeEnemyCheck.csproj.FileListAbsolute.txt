@@ -1,9 +1,0 @@
-/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/bin/Debug/Assembly-CSharp.deps.json
-/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/bin/Debug/Assembly-CSharp.dll
-/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/bin/Debug/Assembly-CSharp.pdb
-/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/obj/TimeEnemyCheck/TimeEnemyCheck.csproj.AssemblyReference.cache
-/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/obj/TimeEnemyCheck/TimeEnemyCheck.GeneratedMSBuildEditorConfig.editorconfig
-/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/obj/TimeEnemyCheck/TimeEnemyCheck.csproj.CoreCompileInputs.cache
-/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/obj/TimeEnemyCheck/TimeEnemyCheck.sourcelink.json
-/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/obj/TimeEnemyCheck/Assembly-CSharp.dll
-/Users/ssuelkka/Documents/GitHub/final-project-team-11/final project/Temp/obj/TimeEnemyCheck/Assembly-CSharp.pdb
