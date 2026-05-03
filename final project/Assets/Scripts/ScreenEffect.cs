@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,14 +6,25 @@ public class ScreenEffect : MonoBehaviour
     public Image redOverlay;
     public GameTimer timer;
 
-    public float maxAlpha = 0.6f;
-    public float dangerTime = 10f; // когда начинается краснение
+    public float maxAlpha = 0.5f;
+    public float dangerTime = 7f; // 🔥 только последние 5 секунд
 
     void Update()
     {
         if (timer == null || redOverlay == null) return;
 
-        float t = timerTimeNormalized();
+        float currentTime = timer.GetCurrentTime();
+
+        float t = 0f;
+
+        if (currentTime <= dangerTime)
+        {
+            t = 1f - (currentTime / dangerTime);
+
+            // плавное нарастание (не резко)
+            t = Mathf.Pow(t, 2f);
+        }
+
         float alpha = Mathf.Lerp(0f, maxAlpha, t);
 
         Color c = redOverlay.color;
@@ -23,22 +32,15 @@ public class ScreenEffect : MonoBehaviour
         redOverlay.color = c;
     }
 
-    float timerTimeNormalized()
+    public void DisableEffect()
     {
-        // чем меньше времени — тем больше красный
-        float ratio = Mathf.Clamp01(1f - (timerCurrent() / timerStart()));
-        return ratio;
-    }
+        if (redOverlay != null)
+        {
+            Color c = redOverlay.color;
+            c.a = 0f;
+            redOverlay.color = c;
+        }
 
-    float timerCurrent()
-    {
-        return (float)typeof(GameTimer)
-            .GetField("currentTime", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
-            .GetValue(timer);
-    }
-
-    float timerStart()
-    {
-        return timer.startTime;
+        enabled = false;
     }
 }

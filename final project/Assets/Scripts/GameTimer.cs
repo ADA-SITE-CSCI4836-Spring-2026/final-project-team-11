@@ -7,6 +7,9 @@ public class GameTimer : MonoBehaviour
     private float currentTime;
 
     public TMP_Text timerText;
+    [Header("Sound")]
+    public AudioSource tickAudio;
+    public float tickStartTime = 10f;
 
     [Header("Game Over")]
     public GameObject gameOverUI;   // панель с текстом и кнопкой
@@ -38,6 +41,12 @@ public class GameTimer : MonoBehaviour
         {
             TriggerGameOver();
         }
+        
+        if (!isGameOver && currentTime <= tickStartTime)
+{
+    if (tickAudio != null && !tickAudio.isPlaying)
+        tickAudio.Play();
+}
     }
 
     void UpdateUI()
@@ -70,4 +79,8 @@ public class GameTimer : MonoBehaviour
 
         Time.timeScale = 0f; // стоп времени
     }
+    public float GetCurrentTime()
+{
+    return currentTime;
+}
 }

@@ -5,12 +5,22 @@ using UnityEngine;
 public class LightDecay : MonoBehaviour
 {
     public Light torchLight;
-    public float decaySpeed = 0.2f;
+
+    public float decaySpeed = 0.3f;
     public float minRange = 1.5f;
     public float maxRange = 10f;
 
+    private float noDecayTimer = 0f; // 🔥 время без убывания
+
     void Update()
     {
+        // если есть буст — не уменьшаем
+        if (noDecayTimer > 0)
+        {
+            noDecayTimer -= Time.deltaTime;
+            return;
+        }
+
         if (torchLight.range > minRange)
         {
             torchLight.range -= decaySpeed * Time.deltaTime;
@@ -21,5 +31,8 @@ public class LightDecay : MonoBehaviour
     {
         torchLight.range += amount;
         torchLight.range = Mathf.Clamp(torchLight.range, minRange, maxRange);
+
+        // 🔥 даём 5 секунд "заморозки"
+        noDecayTimer = 5f;
     }
 }
