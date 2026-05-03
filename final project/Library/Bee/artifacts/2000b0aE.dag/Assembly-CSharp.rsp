@@ -345,6 +345,7 @@
 "Assets/Mini First Person Controller/Scripts/LightDecay.cs"
 "Assets/Mini First Person Controller/Scripts/WinTrigger.cs"
 "Assets/Scripts/BatteryPickup.cs"
+"Assets/Scripts/EnemyAI.cs"
 "Assets/Scripts/GameTimer.cs"
 "Assets/Scripts/ScreenEffect.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
